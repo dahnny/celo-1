@@ -45,14 +45,13 @@ contract Vote {
         string memory _image,
         string memory _description
     ) public {
-        uint _votes = 0;
         candidates[candidatesLength] = Candidate(
             payable(msg.sender),
             _name,
             _image,
             _description,
             price,
-            _votes
+            votes
         );
         candidatesLength++;
     }
